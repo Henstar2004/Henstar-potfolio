@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Henstar S | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    nav {
+      background: #444;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #666;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .btn {
+      display: inline-block;
+      background: #0077cc;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #005fa3;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #0077cc;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #005fa3;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 20px;
+    }
+    a {
+      color: #0077cc;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("ALhcffeIo_tYEUUz2"); // Replace with your EmailJS User ID
+    })();
+
+    function sendMail(e) {
+        console.log(e,"the data")
+      e.preventDefault();
+      emailjs.sendForm("service_cvifc61", "template_jfzo5th", e.target)
+        .then(() => {
+          alert("Message Sent Successfully!");
+          e.target.reset();
+        }, (error) => {
+          alert("Failed to send message: " + JSON.stringify(error));
+        });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Henstar S</h1>
+    <p>Full Stack Developer | Java | Spring Boot | Angular | React | MySQL</p>
+    <a href="Henstar Resume.pdf" download class="btn">📄 Download Resume</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Motivated and detail-oriented Full Stack Developer with hands-on experience in Java, Spring Boot, Angular/React, and MySQL.
+      Eager to contribute to real-world applications, solve challenging problems, and help organizations achieve technical goals.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><strong>Languages:</strong> Java, MySQL</div>
+      <div class="card"><strong>Frontend:</strong> Angular, React</div>
+      <div class="card"><strong>Backend:</strong> Spring Boot</div>
+      <div class="card"><strong>Tools:</strong> Git/GitHub, Netlify, Render</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Kicha Technology</h3>
+        <p>Full-stack web app with Angular/React frontend, Spring Boot backend, PostgreSQL database.</p>
+        <p><a href="https://kichatech.netlify.app/" target="_blank">Live Demo</a></p>
+      </div>
+      <div class="card">
+        <h3>Attendance Management System</h3>
+        <p>RFID-based smart attendance system with NodeMCU, Firebase, Angular, and real-time SMS notification.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Postulate Info Tech Pvt. Ltd.</h3>
+        <p><strong>Full Stack Developer</strong> (July 2024 – Aug 2024)</p>
+        <p>Built responsive web interfaces using Angular and integrated Spring Boot APIs with MySQL.</p>
+      </div>
+      <div class="card">
+        <h3>Postulate Info Tech Pvt. Ltd.</h3>
+        <p><strong>Full Stack Developer</strong> (Mar 2025 – Jun 2025)</p>
+        <p>Designed authentication systems, optimized backend logic, and assisted in deployment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Bachelor of Engineering (ECE)</h3>
+        <p>St. Mother Therasa Engineering College (2021 – 2025)</p>
+      </div>
+      <div class="card">
+        <h3>HSC</h3>
+        <p>St. Joseph Matriculation Higher Secondary School (2020 – 2021)</p>
+      </div>
+      <div class="card">
+        <h3>SSLC</h3>
+        <p>St. Joseph Matriculation Higher Secondary School (2018 – 2019)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="grid">
+      <div class="card">Java Programming – HackerRank</div>
+      <div class="card">Full Stack Development – Udemy</div>
+      <div class="card">Database Management – Coursera</div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card"><strong>Web Development:</strong> Responsive websites using Angular/React.</div>
+      <div class="card"><strong>API Development:</strong> REST APIs with Spring Boot & MySQL/PostgreSQL.</div>
+      <div class="card"><strong>Deployment:</strong> Hosting on Netlify, Render, and GitHub Pages.</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:kenstar12345678@gmail.com">kenstar12345678@gmail.com</a></p>
+    <p><strong>Phone:</strong> 8248745237</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/henstar-s-1b59aa286" target="_blank">linkedin.com/in/henstar-s</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Henstar2004" target="_blank">github.com/Henstar2004</a></p>
+
+    <h3>Send me a message</h3>
+    <form onsubmit="sendMail(event)">
+      <input type="text" name="from_name" placeholder="Your Name" required>
+<input type="email" name="reply_to" placeholder="Your Email" required>
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Henstar S | Portfolio Website</p>
+  </footer>
+</body>
+</html>
