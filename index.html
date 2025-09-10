@@ -9,33 +9,36 @@
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
+      /* background: linear-gradient(to left, #c40808 0%,rgb(255, 255, 255) 30%); */
+      background:rgb(11, 211, 211);
+      color: #ffffff;
     }
     header {
-      background: #222;
-      color: #fff;
+      background: #000000;
+      color: #ffffff;
       padding: 20px 0;
       text-align: center;
     }
     header h1 {
       margin: 0;
       font-size: 2.2rem;
+      color: #ffffff;
+      
     }
     nav {
-      background: #444;
+      background: #dfdddd;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
     nav a {
-      color: #fff;
+      color: #000000;
       padding: 12px 20px;
       text-decoration: none;
       font-weight: bold;
     }
     nav a:hover {
-      background: #666;
+      background: #61abdd;
     }
     section {
       padding: 40px 20px;
@@ -45,7 +48,7 @@
     h2 {
       text-align: center;
       margin-bottom: 20px;
-      color: #222;
+      color: #000000;
     }
     .grid {
       display: grid;
@@ -53,27 +56,30 @@
       gap: 20px;
     }
     .card {
-      background: #fff;
+      background: #000000;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(235, 231, 231, 0.1);
     }
     .btn {
-      display: inline-block;
-      background: #0077cc;
+      
+      background: #2036b1;
       color: #fff;
-      padding: 10px 18px;
+      padding: 6px 8px;
       border-radius: 5px;
       text-decoration: none;
-      margin-top: 10px;
+      position: fixed;
+      font-size:small;
+     
     }
     .btn:hover {
-      background: #005fa3;
+      background: #f8f8f8;
+      color: #000000;
     }
     form input, form textarea {
-      width: 100%;
+      width: 95%;
       padding: 10px;
-      margin: 8px 0;
+      margin: 8px ;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
@@ -86,10 +92,10 @@
       cursor: pointer;
     }
     form button:hover {
-      background: #005fa3;
+      background: #ffffff;
     }
     footer {
-      background: #222;
+      background: #000000;
       color: #fff;
       text-align: center;
       padding: 20px 10px;
@@ -119,12 +125,15 @@
   </script>
 </head>
 <body>
+<a href="https://github.com/Henstar2004/Henstar-potfolio/raw/main/Henstar_Resume.pdf" download class="btn">📄 Download Resume</a>
+
   <header>
     <h1>Henstar S</h1>
-    <p>Full Stack Developer | Java | Spring Boot | Angular | React | MySQL</p>
-    <a href="https://github.com/Henstar2004/Henstar-potfolio/blob/main/Henstar_Resume.pdf" download class="btn">📄 Download Resume</a>
+    <p style="margin: 0%;">Full Stack Java Developer</p>
+    
 
   </header>
+  
 
   <nav>
     <a href="#about">About</a>
@@ -138,11 +147,14 @@
   </nav>
 
   <section id="about">
+    
     <h2>About Me</h2>
+    <div  class="card">
     <p>
       Motivated and detail-oriented Full Stack Developer with hands-on experience in Java, Spring Boot, Angular/React, and MySQL.
       Eager to contribute to real-world applications, solve challenging problems, and help organizations achieve technical goals.
     </p>
+    </div>
   </section>
 
   <section id="skills">
@@ -225,20 +237,23 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" >
     <h2>Contact</h2>
+    <div class="card">
+    
     <p><strong>Email:</strong> <a href="mailto:kenstar12345678@gmail.com">kenstar12345678@gmail.com</a></p>
     <p><strong>Phone:</strong> 8248745237</p>
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/henstar-s-1b59aa286" target="_blank">linkedin.com/in/henstar-s</a></p>
     <p><strong>GitHub:</strong> <a href="https://github.com/Henstar2004" target="_blank">github.com/Henstar2004</a></p>
 
     <h3>Send me a message</h3>
-    <form onsubmit="sendMail(event)">
+    <form onsubmit="sendMail(event)" >
       <input type="text" name="from_name" placeholder="Your Name" required>
 <input type="email" name="reply_to" placeholder="Your Email" required>
 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 <button type="submit">Send</button>
     </form>
+    </div>
   </section>
 
   <footer>
