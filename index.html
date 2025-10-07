@@ -4,107 +4,189 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Henstar S | Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      /* background: linear-gradient(to left, #c40808 0%,rgb(255, 255, 255) 30%); */
-      background:rgb(11, 211, 211);
-      color: #ffffff;
-    }
-    header {
-      background: #000000;
-      color: #ffffff;
-      padding: 20px 0;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      color: #ffffff;
-      
-    }
-    nav {
-      background: #dfdddd;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav a {
-      color: #000000;
-      padding: 12px 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      background: #61abdd;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #000000;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #000000;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(235, 231, 231, 0.1);
-    }
-    .btn {
-      
-      background: #2036b1;
-      color: #fff;
-      padding: 6px 8px;
-      border-radius: 5px;
-      text-decoration: none;
-      position: fixed;
-      font-size:small;
-     
-    }
-    .btn:hover {
-      background: #f8f8f8;
-      color: #000000;
-    }
-    form input, form textarea {
-      width: 95%;
-      padding: 10px;
-      margin: 8px ;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      background: #0077cc;
-      color: #fff;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background: #ffffff;
-    }
-    footer {
-      background: #000000;
-      color: #fff;
-      text-align: center;
-      padding: 20px 10px;
-      margin-top: 20px;
-    }
-    a {
-      color: #0077cc;
-    }
-  </style>
+  <style>/* 🌌 Global Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #000000;
+  color: #ffffff;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+/* 🌟 Header */
+header {
+  background: linear-gradient(90deg, #000000, #001a66, #0059ff);
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 120, 255, 0.4);
+}
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px #cce6ff;
+}
+header p {
+  color: #e6f3ff;
+  font-size: 1.2rem;
+}
+
+/* 🧭 Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #0a0a0a;
+  border-bottom: 2px solid #1e90ff;
+}
+nav a {
+  color: #ffffff;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+}
+nav a:hover {
+  background: linear-gradient(90deg, #0077ff, #00aaff);
+  color: #000;
+  
+  box-shadow: 0 0 15px #0099ff;
+}
+
+/* 🧩 Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+h2 {
+  color: #ffffff;
+  text-shadow: 0 0 20px #3399ff;
+  margin-bottom: 30px;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+/* 📦 Cards and Grids */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0, 100, 255, 0.2);
+  transition: all 0.4s ease;
+}
+.card:hover {
+
+  box-shadow: 0 0 25px #007bff, 0 0 40px #00aaff;
+}
+
+/* 🔘 Download Resume Button */
+.btn {
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.6);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #00bfff, #007bff);
+  box-shadow: 0 0 25px #cce6ff;
+  color: #000;
+}
+
+/* 💬 Contact Form */
+form input, form textarea {
+  width: 95%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #007bff;
+  border-radius: 10px;
+  background: #000;
+  color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 120, 255, 0.3);
+}
+form input::placeholder, form textarea::placeholder {
+  color: #d9d9d9;
+}
+form button {
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  color: #ffffff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 0 15px #007bff;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: linear-gradient(90deg, #00bfff, #007bff);
+  box-shadow: 0 0 25px #cce6ff;
+  color: #000;
+}
+
+/* 🔗 Links */
+a {
+  color: #99ccff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #99ccff;
+}
+
+/* ⚡ Footer */
+footer {
+  background: #000;
+  color: #cce6ff;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 1rem;
+  border-top: 2px solid #007bff;
+  box-shadow: 0 -2px 15px rgba(0, 150, 255, 0.2);
+}
+
+/* 🌠 Animations */
+section, header, nav, footer {
+  animation: fadeIn 1s ease-in-out;
+}
+.currently:hover{
+ box-shadow: 0 0 25px #3cf081, 0 0 40px #048138;
+}
+.currently {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0, 100, 255, 0.2);
+  transition: all 0.4s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script>
     (function(){
@@ -198,6 +280,17 @@
         <p><strong>Full Stack Developer</strong> (Mar 2025 – Jun 2025)</p>
         <p>Designed authentication systems, optimized backend logic, and assisted in deployment.</p>
       </div>
+      <div class=" currently" >
+      <h3>
+        Etical Intelligent Technology <br>
+        <span style="background: #00c853; color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; margin-left: 8px;">
+          🟢 Currently Working
+        </span>
+      </h3>
+      <p><strong>Junior Frontend Developer</strong> (Aug 2025 – Present)</p>
+      <p>Developing interactive user interfaces using Angular, HTML, CSS, and TypeScript. 
+         Collaborating with backend teams to ensure seamless integration and responsive design.</p>
+    </div>
     </div>
   </section>
 
